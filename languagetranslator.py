@@ -54,7 +54,7 @@ def main():
     """
     Main function to create the Streamlit app for language translation.
     """
-    st.header('Manasi Prasad & Advaita Dubey :dog:', divider='rainbow')
+    st.header('Trivikram Prasad :dog:', divider='rainbow')
     st.title('Language Translator using AI')
     source_text = st.text_area("Enter the text to translate:")
 
