@@ -76,7 +76,7 @@ def main():
         # Give a bit of delay for user experience
         time.sleep(5)
         # Close streamlit browser tab
-        keyboard.press_and_release('ctrl+w')
+        #keyboard.press_and_release('ctrl+w') (needs root access)
         # Terminate streamlit python process
         pid = os.getpid()
         p = psutil.Process(pid)
@@ -85,4 +85,5 @@ def main():
 
 if __name__== "__main__":
     main()
+
 
