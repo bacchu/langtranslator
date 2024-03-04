@@ -9,8 +9,9 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
 
 # Define language options and their corresponding codes
-lang_options = ['English', 'French', 'German', 'Italian', 'Russian', 'Swedish']
-lang_tuple = (("English","en"), ("French","fr"), ("German","de"), ("Italian","it"), ("Russian","ru"), ("Swedish","sv"))
+lang_options = ['Arabic','Danish', 'English', 'French', 'German', 'Italian', 'Russian', 'Spanish', 'Swedish', 'Zhongwen(Chinese)']
+lang_tuple = (("Arabic", "ar"), ("Danish","da"), ("English","en"), ("French","fr"), ("German","de"),
+               ("Italian","it"), ("Russian","ru"), ("Spanish", "es"), ("Swedish","sv"), ("Zhongwein","zh"))
 
 src_lang_text = 'Select source language:'
 dest_lang_text = 'Select target language:'
@@ -34,7 +35,8 @@ def translate(text, source_language, target_language):
     Function to translate text from source language to target language using the Transformers pipeline.
 
     Parameters:
-    - text (str): Input text to be translated.
+
+        - text (str): Input text to be translated.
     - source_language (str): Source language code.
     - target_language (str): Target language code.
 
@@ -54,7 +56,8 @@ def main():
     """
     Main function to create the Streamlit app for language translation.
     """
-    st.header('Trivikram Prasad :dog:', divider='rainbow')
+    st.set_page_config(layout='wide')
+    st.header('Trivikram Prasad' :dog:', divider='rainbow')
     st.title('Language Translator using AI')
     source_text = st.text_area("Enter the text to translate:")
 
@@ -68,7 +71,7 @@ def main():
         st.write("Translated Text:", translated_text)
 
     # Button to shut down the app
-    exit_app = st.button("Shut Down")
+    exit_app = st.button("Quit Translator")
     if exit_app:
         # Give a bit of delay for user experience
         time.sleep(5)
@@ -82,3 +85,4 @@ def main():
 
 if __name__== "__main__":
     main()
+
