@@ -1,6 +1,6 @@
 import streamlit as st
 import time
-import keyboard
+#import keyboard
 import os
 import psutil
 
